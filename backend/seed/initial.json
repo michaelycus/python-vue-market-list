@@ -1,0 +1,385 @@
+[
+{
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+        "name": "Alimentos"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 2,
+    "fields": {
+        "name": "Bebibas"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 3,
+    "fields": {
+        "name": "Carnes"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 4,
+    "fields": {
+        "name": "Frios"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 5,
+    "fields": {
+        "name": "Frutas, verduras e legumes"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 6,
+    "fields": {
+        "name": "Higiene"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 7,
+    "fields": {
+        "name": "Limpeza"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 8,
+    "fields": {
+        "name": "Padaria"
+    }
+},
+{
+    "model": "products.category",
+    "pk": 13,
+    "fields": {
+        "name": "Outros"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "name": "Canela em p\u00f3 50 g",
+        "brand": "Kitano",
+        "category": 1,
+        "created_at": "2020-08-13"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+        "name": "Ado\u00e7ante diet\u00e9tico de Stevia Natural 100 ml",
+        "brand": "Stevita",
+        "category": 1,
+        "created_at": "2020-08-13"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+        "name": "Cracker integral 7 gr\u00e3os",
+        "brand": "Kelloggs",
+        "category": 1,
+        "created_at": "2020-08-13"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+        "name": "Maionese sache 400g",
+        "brand": "Hellmanns",
+        "category": 1,
+        "created_at": "2020-08-13"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+        "name": "Arroz Parbolizado 1 kg",
+        "brand": "Prato fino",
+        "category": 1,
+        "created_at": "2020-08-13"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+        "name": "Gelatina sem sabor e incolor",
+        "brand": "Royal",
+        "category": 1,
+        "created_at": "2020-08-13"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+        "name": "Massa Integral Espaguete",
+        "brand": "Isabela",
+        "category": 1,
+        "created_at": "2020-08-13"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+        "name": "Massa yakisoba",
+        "brand": "Nissin",
+        "category": 1,
+        "created_at": "2020-08-13"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+        "name": "Molho especial Yakissoba 300g",
+        "brand": "Fugini",
+        "category": 1,
+        "created_at": "2020-08-13"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+        "name": "Farinha de mandioca torrada",
+        "brand": "",
+        "category": 1,
+        "created_at": "2020-08-13"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 11,
+    "fields": {
+        "name": "Presunto Cozido Fatiado 180g",
+        "brand": "Excelsior",
+        "category": 1,
+        "created_at": "2020-08-13"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 12,
+    "fields": {
+        "name": "Lata leite em p\u00f3 desnatado",
+        "brand": "Eleg\u00ea",
+        "category": 1,
+        "created_at": "2020-08-13"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 13,
+    "fields": {
+        "name": "Garrafa Velho Barreiro",
+        "brand": "",
+        "category": 2,
+        "created_at": "2020-08-05"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 14,
+    "fields": {
+        "name": "\u00c1gua sanit\u00e1ria 2 litros",
+        "brand": "Girando sol",
+        "category": 7,
+        "created_at": "2020-08-13"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 15,
+    "fields": {
+        "name": "Omo Lavagem perfeita 3 Litros",
+        "brand": "",
+        "category": 7,
+        "created_at": "2020-08-05"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 16,
+    "fields": {
+        "name": "Pinho Sol 1 litro",
+        "brand": "",
+        "category": 6,
+        "created_at": "2020-08-05"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 17,
+    "fields": {
+        "name": "Costela su\u00edna congelada",
+        "brand": "",
+        "category": 3,
+        "created_at": "2020-08-05"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 18,
+    "fields": {
+        "name": "Pacote congelado de sobrecoxa de frango",
+        "brand": "",
+        "category": 3,
+        "created_at": "2020-08-05"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 19,
+    "fields": {
+        "name": "Pacote congelado de peito de frango sem osso",
+        "brand": "",
+        "category": 3,
+        "created_at": "2020-08-05"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 20,
+    "fields": {
+        "name": "Pacote congelado de peito de frango com osso",
+        "brand": "",
+        "category": 3,
+        "created_at": "2020-08-05"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 21,
+    "fields": {
+        "name": "Garrafa Suco Uva Tinto Integral",
+        "brand": "Garibaldi",
+        "category": 2,
+        "created_at": "2020-08-13"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 22,
+    "fields": {
+        "name": "Azeite Oliva 500 ml",
+        "brand": "La Violetera",
+        "category": 1,
+        "created_at": "2020-08-13"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 23,
+    "fields": {
+        "name": "Farelo de aveia 500 g",
+        "brand": "Soberana",
+        "category": 1,
+        "created_at": "2020-08-13"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 24,
+    "fields": {
+        "name": "Lata Mucilon Arroz e Aveia",
+        "brand": "",
+        "category": 1,
+        "created_at": "2020-08-05"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 25,
+    "fields": {
+        "name": "Arroz Integral 1 kg",
+        "brand": "Prato fino",
+        "category": 1,
+        "created_at": "2020-08-13"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 26,
+    "fields": {
+        "name": "Leite de saquinho 1 litro",
+        "brand": "",
+        "category": 8,
+        "created_at": "2020-08-05"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 27,
+    "fields": {
+        "name": "Pacote esponjas (c/4)",
+        "brand": "",
+        "category": 7,
+        "created_at": "2020-08-05"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 28,
+    "fields": {
+        "name": "Lava Roupas L\u00edquido  Coco 2L",
+        "brand": "Gota Limpa",
+        "category": 7,
+        "created_at": "2020-08-13"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 29,
+    "fields": {
+        "name": "Detergente de coco",
+        "brand": "",
+        "category": 7,
+        "created_at": "2020-08-05"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 30,
+    "fields": {
+        "name": "Pacote Papel Higi\u00eanico 60 metros - 4 rolos",
+        "brand": "Mili Branco",
+        "category": 7,
+        "created_at": "2020-08-13"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 31,
+    "fields": {
+        "name": "Fermento qu\u00edmico",
+        "brand": "Royal",
+        "category": 1,
+        "created_at": "2020-08-13"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 32,
+    "fields": {
+        "name": "Maizena",
+        "brand": "",
+        "category": 1,
+        "created_at": "2020-08-05"
+    }
+}
+]
