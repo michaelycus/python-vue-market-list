@@ -18,9 +18,7 @@
                    class="pa-1 flex-column"
                    style="width: 180px; height: 90px">
 
-                <product-item @increment="incrementProduct"
-                              @decrement="decrementProduct"
-                              :product="product"></product-item>
+                <product-item :product="product"></product-item>
 
               </div>
             </div>
@@ -61,7 +59,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 import ProductItem from '../components/ProductItem'
 
 export default {
@@ -77,27 +74,19 @@ export default {
     }
   },
 
-  async fetch () {
-    this.categories = await fetch(
-      'http://127.0.0.1:8000/api/categories/'
-    ).then(res => res.json())
-    this.products = await fetch(
-      'http://127.0.0.1:8000/api/products/'
-    ).then(res => res.json())
+  async asyncData ({ $axios }) {
+    let categories = await $axios.$get('api/categories/')
+    let products = await $axios.$get('api/products/')
 
+    return { categories, products }
+  },
+
+  created () {
     this.products.map(p => p.quantity = 0)
     this.loadFromLocalStorage()
   },
 
   methods: {
-    incrementProduct (productId) {
-      this.products.find(p => p.id == productId).quantity++
-    },
-
-    decrementProduct (productId) {
-      this.products.find(p => p.id == productId).quantity--
-    },
-
     generateList () {
       this.completeList = ''
       this.categories.forEach(category => {

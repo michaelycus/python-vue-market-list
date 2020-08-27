@@ -100,8 +100,6 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
   data: () => ({
     dialog: false,
@@ -137,19 +135,13 @@ export default {
     },
   },
 
-  created () {
-    this.initialize()
+  async asyncData ({ $axios }) {
+    let categories = await $axios.$get('api/categories/')
+
+    return { categories }
   },
 
   methods: {
-    initialize () {
-      axios.get('http://127.0.0.1:8000/api/categories/').then(response => {
-        this.categories = response.data
-      }).catch(errors => {
-        console.log(errors)
-      })
-    },
-
     editItem (item) {
       this.editedIndex = this.categories.indexOf(item)
       this.editedItem = Object.assign({}, item)
@@ -166,7 +158,7 @@ export default {
       this.confirmDeleteDialog = false
       this.categories.splice(this.editedIndex, 1)
 
-      axios.delete(`http://127.0.0.1:8000/api/categories/${this.editedItem.id}`)
+      this.$axios.$delete(`api/categories/${this.editedItem.id}`)
         .catch(errors => {
           console.log(errors)
         })
@@ -189,18 +181,18 @@ export default {
       if (this.editedIndex > -1) {
         Object.assign(this.categories[this.editedIndex], this.editedItem)
 
-        axios.put(`http://127.0.0.1:8000/api/categories/${this.editedItem.id}/`, {
+        this.$axios.$put(`api/categories/${this.editedItem.id}/`, {
           'id': this.editedItem.id,
           'name': this.editedItem.name
         }).catch(errors => {
           console.log(errors)
         })
       } else {
-        axios.post(`http://127.0.0.1:8000/api/categories/`, {
+        this.$axios.$post(`api/categories/`, {
           'id': this.editedItem.id,
           'name': this.editedItem.name
         }).then(response => {
-          this.categories.push(response.data)
+          this.categories.push(response)
         }).catch(errors => {
           console.log(errors)
         })

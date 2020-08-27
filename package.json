@@ -9,7 +9,7 @@
         "generate": "nuxt generate"
     },
     "dependencies": {
-        "@nuxtjs/axios": "^5.12.1",
+        "@nuxtjs/axios": "^5.12.2",
         "lodash": "^4.17.19",
         "nuxt": "^2.14.0"
     },

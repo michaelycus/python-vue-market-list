@@ -116,8 +116,6 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
   data: () => ({
     dialog: false,
@@ -160,23 +158,14 @@ export default {
     },
   },
 
-  created () {
-    this.initialize()
+  async asyncData ({ $axios }) {
+    let categories = await $axios.$get('api/categories/')
+    let products = await $axios.$get('api/products/')
+
+    return { categories, products }
   },
 
   methods: {
-    initialize () {
-      const requestCategories = axios.get('http://127.0.0.1:8000/api/categories/');
-      const requestProducts = axios.get('http://127.0.0.1:8000/api/products/');
-
-      axios.all([requestCategories, requestProducts]).then(axios.spread((...responses) => {
-        this.categories = responses[0].data
-        this.products = responses[1].data
-      })).catch(errors => {
-        console.log(errors)
-      })
-    },
-
     categoryName (id) {
       return this.categories.find(c => c.id == id).name
     },
@@ -203,7 +192,7 @@ export default {
       this.confirmDeleteDialog = false
       this.products.splice(this.editedIndex, 1)
 
-      axios.delete(`http://127.0.0.1:8000/api/products/${this.editedItem.id}`)
+      this.$axios.$delete(`api/products/${this.editedItem.id}`)
         .catch(errors => {
           console.log(errors)
         })
@@ -226,7 +215,7 @@ export default {
       if (this.editedIndex > -1) {
         Object.assign(this.products[this.editedIndex], this.editedItem)
 
-        axios.put(`http://127.0.0.1:8000/api/products/${this.editedItem.id}/`, {
+        this.$axios.$put(`api/products/${this.editedItem.id}/`, {
           'id': this.editedItem.id,
           'name': this.editedItem.name,
           'category': this.editedItem.category,
@@ -235,14 +224,13 @@ export default {
           console.log(errors)
         })
       } else {
-        axios.post(`http://127.0.0.1:8000/api/products/`, {
+        this.$axios.$post(`api/products/`, {
           'name': this.editedItem.name,
           'category': this.editedItem.category,
           'brand': this.editedItem.brand,
         }).then(response => {
-          this.products.push(response.data)
+          this.products.push(response)
         }).catch(errors => {
-          console.log('erros:');
           console.log(errors)
         })
       }

@@ -39,28 +39,21 @@ export default {
     }
   },
 
-  created () {
+  mounted () {
     this.quantity = this.product.quantity
-  },
-
-  watch: {
-    product: function (val) {
-      console.log(val);
-      this.quantity = this.product.quantity
-    }
   },
 
   methods: {
     decrease () {
       if (this.quantity > 0) {
+        this.product.quantity--
         this.quantity--
-        this.$emit("decrement", this.product.id)
       }
     },
 
     increase () {
+      this.product.quantity++
       this.quantity++
-      this.$emit("increment", this.product.id)
     }
   },
 }
